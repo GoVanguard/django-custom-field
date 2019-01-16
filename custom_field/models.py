@@ -19,7 +19,7 @@ class CustomField(models.Model):
     for each custom field the user configures.
     """
     name = models.CharField(max_length=150)
-    content_type = models.ForeignKey(ContentType)
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
     field_type = models.CharField(
         max_length=1,
         choices=(
@@ -96,10 +96,10 @@ class CustomFieldValue(models.Model):
     A field instance -- contains the actual data.  There are many of these, for
     each value that corresponds to a CustomField for a given model.
     """
-    field = models.ForeignKey(CustomField, related_name='instance')
+    field = models.ForeignKey(CustomField, related_name='instance', on_delete=models.CASCADE)
     value = models.CharField(max_length=5000, blank=True, null=True)
     object_id = models.PositiveIntegerField()
-    content_type = models.ForeignKey(ContentType, blank=True, null=True)
+    content_type = models.ForeignKey(ContentType, blank=True, null=True, on_delete=models.CASCADE)
     content_object = fields.GenericForeignKey('content_type', 'object_id')
 
     def __str__(self):
