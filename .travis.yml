@@ -1,11 +1,12 @@
+# Config file for automatic testing at travis-ci.org
+
+dist: focal
+sudo: required
 language: python
-
-sudo: false
-
+python: 3.8
 
 env:
   - TOX_ENV=py38-django31
-
 
 install:
   - pip install tox
