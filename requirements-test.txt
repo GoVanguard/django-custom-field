@@ -1,5 +1,4 @@
--r requirements.txt
-
+six
 coverage
 tox
 codecov
