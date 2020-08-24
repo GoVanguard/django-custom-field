@@ -4,12 +4,7 @@ sudo: false
 
 
 env:
-  - TOX_ENV=py27-django18
-  - TOX_ENV=py27-django19
-  - TOX_ENV=py27-django110
-  - TOX_ENV=py34-django18
-  - TOX_ENV=py34-django19
-  - TOX_ENV=py34-django110
+  - TOX_ENV=py38-django31
 
 
 install:
