@@ -4,8 +4,8 @@ from django import forms
 from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.contrib.contenttypes import fields
-#from six import python_2_unicode_compatible
-from future.utils import python_2_unicode_compatible
+from six import python_2_unicode_compatible
+#from future.utils import python_2_unicode_compatible
 import sys
 
 
