@@ -8,8 +8,9 @@ python: 3.8
 env:
   - TOX_ENV=py38-django31
 
-install:
-  - python -m pip install -r requirements-test.txt
+matrix:
+  fast_finish: true
 
-script:
-- tox -e $TOX_ENV
+install: pip install -r requirements-test.txt
+
+script: tox -e $TOX_ENV
