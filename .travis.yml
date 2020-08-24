@@ -9,7 +9,7 @@ env:
   - TOX_ENV=py38-django31
 
 install:
-  - pip3 install -r requirements-test.txt
+  - python -m pip install -r requirements-test.txt
 
 script:
 - tox -e $TOX_ENV
